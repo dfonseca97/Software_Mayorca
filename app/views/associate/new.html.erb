@@ -1,6 +1,6 @@
 <h1> Nuevo asociado </h1>
 
-<% form_with scope: :associate, local: true do |form| %>
+<% form_with scope: :associate, url: articles_path, local: true do |form| %>
 	
 	<p>
 		<% form.label 'nombre' %><br>
