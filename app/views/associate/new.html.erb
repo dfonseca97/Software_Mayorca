@@ -1,0 +1,43 @@
+<h1> Nuevo asociado </h1>
+
+<% form_with scope: :associate, local: true do |form| %>
+	
+	<p>
+		<% form.label 'nombre' %><br>
+		<% form.text_field :name %>
+	</p>
+	<p>
+		<% form.label 'apellido' %><br>
+		<% form.text_field :last_name %>
+	</p>
+	<p>
+		<% form.label 'código' %><br>
+		<% form.text_field :code %>
+	</p>
+	
+	<p>
+		<% form.label 'posición' %><br>
+		<% form.text_field :position %>
+	</p>
+	<p>
+		<% form.label 'patrocinador' %><br>
+		<% form.text_field :sponsor %>
+	</p>
+	<p>
+		<% form.label 'presidente ascendente' %><br>
+		<% form.text_field :ascending_president %>
+	</p>
+	<p>
+		<% form.label 'tabulador ascendente' %><br>
+		<% form.text_field :ascending_tabulator %>
+	</p>
+	
+	<p>
+		<%= form.submit %>
+	</p>
+
+<% end %>
+	
+	
+	
+	
