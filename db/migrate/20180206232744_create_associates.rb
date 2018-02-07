@@ -1,6 +1,6 @@
 class CreateAssociates < ActiveRecord::Migration[5.1]
   def change
-    drop_table :associates
+
     create_table :associates do |t|
       t.string :code
       t.string :name
