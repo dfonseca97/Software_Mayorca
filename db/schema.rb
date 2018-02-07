@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180206232744) do
+ActiveRecord::Schema.define(version: 20180207170643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "associates", force: :cascade do |t|
     t.string "code"
-    t.string "name"
-    t.string "last_name"
+    t.string "name", null: false
+    t.string "last_name", null: false
     t.string "sponsor"
     t.string "ascending_president"
     t.string "ascending_tabulator"
     t.string "last_payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_associates_on_code", unique: true
   end
 
 end

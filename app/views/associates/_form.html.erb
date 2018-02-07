@@ -12,36 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= form.label 'código' %>
-    <%= form.text_field :code, id: :associate_code %>
+    <%= form.label 'Código*' %>
+    <%= form.number_field :code, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
-    <%= form.label 'nombre' %>
-    <%= form.text_field :name, id: :associate_name %>
+    <%= form.label 'Nombre*' %>
+    <%= form.text_field :name, id: :associate_name, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
-    <%= form.label 'apellido' %>
-    <%= form.text_field :last_name, id: :associate_last_name %>
+    <%= form.label 'Apellido*' %>
+    <%= form.text_field :last_name, id: :associate_last_name, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
-    <%= form.label 'patrocinador' %>
+    <%= form.label 'Patrocinador' %>
     <%= form.text_field :sponsor, id: :associate_sponsor %>
   </div>
 
   <div class="field">
-    <%= form.label 'presidente ascendente' %>
+    <%= form.label 'Presidente ascendente' %>
     <%= form.text_field :ascending_president, id: :associate_ascending_president %>
   </div>
 
   <div class="field">
-    <%= form.label 'tabulador ascendente' %>
+    <%= form.label 'Tabulador ascendente' %>
     <%= form.text_field :ascending_tabulator, id: :associate_ascending_tabulator %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Crear asociado' %>
   </div>
 <% end %>
