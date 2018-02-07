@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @associate.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @associate.name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @associate.last_name %>
+</p>
+
+<p>
+  <strong>Sponsor:</strong>
+  <%= @associate.sponsor %>
+</p>
+
+<p>
+  <strong>Ascending president:</strong>
+  <%= @associate.ascending_president %>
+</p>
+
+<p>
+  <strong>Ascending tabulator:</strong>
+  <%= @associate.ascending_tabulator %>
+</p>
+
+<p>
+  <strong>Last payment:</strong>
+  <%= @associate.last_payment %>
+</p>
+
+<%= link_to 'Edit', edit_associate_path(@associate) %> |
+<%= link_to 'Back', associates_path %>

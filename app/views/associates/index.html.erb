@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Associates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Last name</th>
+      <th>Sponsor</th>
+      <th>Ascending president</th>
+      <th>Ascending tabulator</th>
+      <th>Last payment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @associates.each do |associate| %>
+      <tr>
+        <td><%= associate.code %></td>
+        <td><%= associate.name %></td>
+        <td><%= associate.last_name %></td>
+        <td><%= associate.sponsor %></td>
+        <td><%= associate.ascending_president %></td>
+        <td><%= associate.ascending_tabulator %></td>
+        <td><%= associate.last_payment %></td>
+        <td><%= link_to 'Show', associate %></td>
+        <td><%= link_to 'Edit', edit_associate_path(associate) %></td>
+        <td><%= link_to 'Destroy', associate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Associate', new_associate_path %>

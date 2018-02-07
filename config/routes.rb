@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  	
+  resources :associates
  	get 'welcome/index'
 
 	resources :associate

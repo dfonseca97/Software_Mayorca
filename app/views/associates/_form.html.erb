@@ -1,4 +1,15 @@
 <%= form_with(model: associate, local: true) do |form| %>
+  <% if associate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(associate.errors.count, "error") %> prohibited this associate from being saved:</h2>
+
+      <ul>
+      <% associate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :code %>
@@ -6,33 +17,33 @@
   </div>
 
   <div class="field">
-    <%= form.label 'nombre' %>
+    <%= form.label :name %>
     <%= form.text_field :name, id: :associate_name %>
   </div>
 
   <div class="field">
-    <%= form.label 'apellido' %>
+    <%= form.label :last_name %>
     <%= form.text_field :last_name, id: :associate_last_name %>
   </div>
 
   <div class="field">
-    <%= form.label 'posición' %>
-    <%= form.text_field :position, id: :associate_position %>
-  </div>
-
-  <div class="field">
-    <%= form.label 'patrocinador' %>
+    <%= form.label :sponsor %>
     <%= form.text_field :sponsor, id: :associate_sponsor %>
   </div>
 
   <div class="field">
-    <%= form.label 'presidente ascendente' %>
+    <%= form.label :ascending_president %>
     <%= form.text_field :ascending_president, id: :associate_ascending_president %>
   </div>
 
   <div class="field">
-    <%= form.label 'tabulador ascendente' %>
+    <%= form.label :ascending_tabulator %>
     <%= form.text_field :ascending_tabulator, id: :associate_ascending_tabulator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_payment %>
+    <%= form.text_field :last_payment, id: :associate_last_payment %>
   </div>
 
   <div class="actions">
