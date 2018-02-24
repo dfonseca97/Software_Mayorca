@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
  	
+  resources :prices
+
+  resources :schedules
+  resources :activities #do
+  	#collection do
+  	#	get 'active'
+  	#end
+  #end
+
   devise_for :users
   resources :associates
  	get 'welcome/index'

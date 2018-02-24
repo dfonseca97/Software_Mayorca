@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207193803) do
+ActiveRecord::Schema.define(version: 20180220113733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name", null: false
+    t.boolean "active"
+    t.integer "schedule_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "associates", force: :cascade do |t|
     t.string "code"
@@ -26,6 +34,26 @@ ActiveRecord::Schema.define(version: 20180207193803) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_associates_on_code", unique: true
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.string "position", null: false
+    t.string "activity", null: false
+    t.float "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "day_1", null: false
+    t.string "day_2", null: false
+    t.string "day_3"
+    t.string "day_4"
+    t.string "day_5"
+    t.string "starting_time", null: false
+    t.string "ending_time", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

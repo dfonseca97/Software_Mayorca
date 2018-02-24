@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day 1:</strong>
+  <%= @schedule.day_1 %>
+</p>
+
+<p>
+  <strong>Day 2:</strong>
+  <%= @schedule.day_2 %>
+</p>
+
+<p>
+  <strong>Day 3:</strong>
+  <%= @schedule.day_3 %>
+</p>
+
+<p>
+  <strong>Day 4:</strong>
+  <%= @schedule.day_4 %>
+</p>
+
+<p>
+  <strong>Day 5:</strong>
+  <%= @schedule.day_5 %>
+</p>
+
+<p>
+  <strong>Starting time:</strong>
+  <%= @schedule.starting_time %>
+</p>
+
+<p>
+  <strong>Ending time:</strong>
+  <%= @schedule.ending_time %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>
