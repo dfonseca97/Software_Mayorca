@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  associate_code: MyString
+  activity_name: MyString
+  date: 2018-02-24
+
+two:
+  associate_code: MyString
+  activity_name: MyString
+  date: 2018-02-24

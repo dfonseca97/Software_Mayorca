@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  	
+  resources :attendances
   resources :prices
-
   resources :schedules
   resources :activities #do
   	#collection do
