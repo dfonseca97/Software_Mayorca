@@ -82,7 +82,7 @@ class SchedulesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
       params.require(:schedule).permit(:day_1, :day_2, :day_3, :day_4, :day_5, :starting_time, 
-        :ending_time)
+        :ending_time, :name)
     end
      def activity_params
       params.require(:schedule).permit(:name, :active)

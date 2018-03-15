@@ -1,3 +1,5 @@
+require 'date'
+
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
 
@@ -15,17 +17,17 @@ class AttendancesController < ApplicationController
   # GET /attendances/new
   def new
 
+    @attendance = Attendance.new
     @activities = Activity.all
 
     @names = Array.new
 
-   @activities.each do |act|
+    @activities.each do |act|
 
-      @names << [act.name]
+      @names << act.name
 
     end
 
-    @attendance = Attendance.new
   end
 
   # GET /attendances/1/edit
@@ -39,15 +41,25 @@ class AttendancesController < ApplicationController
    #Encontrar asociado por codigo y actividad por nombre.
 
     @attendance = Attendance.new(attendance_params)
+    @attendance.date = DateTime.now
+    @activities = Activity.all
 
+    @names = Array.new
+
+    @activities.each do |act|
+
+      @names << act.name
+
+    end
 
     respond_to do |format|
-      if !Associate.where(code: @attendance.associate_code).empty? and @attendance.save 
+      if Associate.exists?(code: params[:attendance][:associate_code]) and @attendance.save 
         format.html { redirect_to @attendance, notice: 'Attendance was successfully created.' }
         format.json { render :show, status: :created, location: @attendance }
       else
-        format.html { render :new }
-        format.json { render json: @attendance.errors, status: :unprocessable_entity }
+        format.html { redirect_to new_attendance_path,  notice: 'El código no está registrado.'}
+        format.json { render json: @attendance.errors, status: :unprocessable_entity}
+
       end
     end
   end
@@ -85,7 +97,8 @@ class AttendancesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def attendance_params
   
-      params.require(:attendance).permit(:associate_code, :activity_name, :date)
+      params.require(:attendance).permit(:associate_code, :activity_name)
       
     end
+
 end

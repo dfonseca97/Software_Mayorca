@@ -16,9 +16,12 @@
     <%= form.text_field :position, id: :price_position %>
   </div>
 
+
   <div class="field">
-    <%= form.label "Actividad" %>
-    <%= form.text_field :activity, id: :price_activity %> 
+    <%= form.label :activity %>
+    <%= form.select(:activity, @names, :required => true) %>
+
+  </div>
    
   </div>
 

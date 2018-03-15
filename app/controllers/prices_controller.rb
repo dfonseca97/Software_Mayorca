@@ -15,6 +15,15 @@ class PricesController < ApplicationController
   # GET /prices/new
   def new
     @price = Price.new
+
+    @activities = Activity.all
+    @names = Array.new
+
+    @activities.each do |act|
+
+      @names << act.name
+
+    end
   end
 
   # GET /prices/1/edit
@@ -25,6 +34,15 @@ class PricesController < ApplicationController
   # POST /prices.json
   def create
     @price = Price.new(price_params)
+    @activities = Activity.all
+
+    @names = Array.new
+
+    @activities.each do |act|
+
+      @names << act.name
+
+    end
 
     respond_to do |format|
       if @price.save
