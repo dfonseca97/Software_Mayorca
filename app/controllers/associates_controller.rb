@@ -28,7 +28,7 @@ class AssociatesController < ApplicationController
 
     respond_to do |format|
       if @associate.save
-        format.html { redirect_to @associate, notice: 'Associate was successfully created.' }
+        format.html { redirect_to associates_path, notice: 'Associate was successfully created.' }
         format.json { render :show, status: :created, location: @associate }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AssociatesController < ApplicationController
   def update
     respond_to do |format|
       if @associate.update(associate_params)
-        format.html { redirect_to @associate, notice: 'Associate was successfully updated.' }
+        format.html { redirect_to associates_path, notice: 'Associate was successfully updated.' }
         format.json { render :show, status: :ok, location: @associate }
       else
         format.html { render :edit }

@@ -33,7 +33,7 @@ class SchedulesController < ApplicationController
         @activity.schedule_id = @schedule.id
 
         if @activity.save
-            format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }
+            format.html { redirect_to activities_path, notice: 'Schedule was successfully created.' }
             format.json { render :show, status: :created, location: @schedule }
         else
             format.html { render :new }

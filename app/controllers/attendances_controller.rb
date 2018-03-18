@@ -54,7 +54,7 @@ class AttendancesController < ApplicationController
 
     respond_to do |format|
       if Associate.exists?(code: params[:attendance][:associate_code]) and @attendance.save 
-        format.html { redirect_to @attendance, notice: 'Attendance was successfully created.' }
+        format.html { redirect_to attendances_path, notice: 'Attendance was successfully created.' }
         format.json { render :show, status: :created, location: @attendance }
       else
         format.html { redirect_to new_attendance_path,  notice: 'El código no está registrado.'}

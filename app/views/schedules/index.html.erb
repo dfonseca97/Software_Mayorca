@@ -36,7 +36,7 @@
         <td><%= schedule.starting_time %></td>
         <td><%= schedule.ending_time %></td>
         <td><%= link_to 'Edit', edit_schedule_path(schedule), class: 'button' %></td>
-        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?'},  class: 'button'  %>
+        <td><%= button_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?'} %>
         </td>
       </tr>
     <% end %>

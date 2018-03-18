@@ -35,7 +35,7 @@
         <td><%= associate.ascending_tabulator %></td>
         <td><%= associate.last_payment %></td>
         <td><%= link_to 'Edit', edit_associate_path(associate), class: 'button'  %></td>
-        <td><%= link_to 'Destroy', associate, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>   </td>
+        <td><%= button_to 'Destroy', associate,  data: { confirm: 'Are you sure?' }, method: :delete, class: 'button' %>   </td>
       </tr>
     <% end %>
       

@@ -1,5 +1,9 @@
 <head>
-  <%= stylesheet_link_tag "forms" %>
+ <%= stylesheet_link_tag "buttons" %>
+ <%= stylesheet_link_tag "tables" %>
+ <%= stylesheet_link_tag "forms" %>
+  
+
 </head>
 
 
@@ -23,6 +27,6 @@
     <%= form.check_box :active, id: :activity_active %>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Crear actividad', class: 'fsubmit'  %>
   </div>
 <% end %>

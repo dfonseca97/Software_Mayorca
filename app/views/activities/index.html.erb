@@ -22,8 +22,8 @@
       <tr>
         <td class="lalign"><%= activity.name %></td>
         <td><%= activity.active %></td>
-        <td><%= link_to 'Modificar', edit_activity_path(activity),method: :get, class: 'button'  %></td>
-        <td><%= link_to 'Eliminar', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %> </td>
+        <td><%= link_to 'Modificar', edit_activity_path(activity), class: 'button'  %></td>
+        <td><%= button_to 'Eliminar', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %> </td>
       </tr>
       </tr>
     <% end %>
