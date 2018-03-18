@@ -19,6 +19,8 @@
         <th><span>Día 5</span></th>
         <th><span>Hora de inicio</span></th>
         <th><span>Hora de fin</span></th>
+        <th><span>Gestión</span></th>
+        <th><span></span></th>
       </tr>
     </thead>
     <tbody>
@@ -45,4 +47,6 @@
 
 <br>
 
+<%= link_to 'Atrás', select_activity_management_path,  class: 'button'  %>
 <%= link_to 'Nuevo horario', new_schedule_path, class: 'button'  %>
+
