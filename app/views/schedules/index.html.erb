@@ -1,26 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Schedules</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Actividad</th>
-      <th>Day 1</th>
-      <th>Day 2</th>
-      <th>Day 3</th>
-      <th>Day 4</th>
-      <th>Day 5</th>
-      <th>Starting time</th>
-      <th>Ending time</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+<head> 
+ <%= stylesheet_link_tag "tables" %>
+ <%= stylesheet_link_tag "buttons" %>
+</head>
 
-  <tbody>
+<body>
+  <h1>Horarios</h1>
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Actividad</span></th>
+        <th><span>Día 1</span></th>
+        <th><span>Día 2</span></th>
+        <th><span>Día 3</span></th>
+        <th><span>Día 4</span></th>
+        <th><span>Día 5</span></th>
+        <th><span>Hora de inicio</span></th>
+        <th><span>Hora de fin</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tbody>
     <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.name %></td>
+        <td class="lalign"><%= schedule.name %></td>
         <td><%= schedule.day_1 %></td>
         <td><%= schedule.day_2 %></td>
         <td><%= schedule.day_3 %></td>
@@ -28,14 +33,16 @@
         <td><%= schedule.day_5 %></td>
         <td><%= schedule.starting_time %></td>
         <td><%= schedule.ending_time %></td>
-        <td><%= link_to 'Show', schedule %></td>
-        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_schedule_path(schedule), class: 'button' %></td>
+        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?'},  class: 'button'  %>
+        </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+      
+    </tbody>
+  </table>
+ </div> 
 
 <br>
 
-<%= link_to 'New Schedule', new_schedule_path %>
+<%= link_to 'Nuevo horario', new_schedule_path, class: 'button'  %>

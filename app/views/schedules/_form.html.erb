@@ -1,3 +1,9 @@
+
+<head> 
+ <%= stylesheet_link_tag "forms" %>
+</head>
+
+
 <%= form_with(model: schedule, local: true) do |form| %>
   <% if schedule.errors.any? %>
     <div id="error_explanation">
@@ -11,14 +17,11 @@
     </div>
   <% end %>
 
+<body>
+<div class="container">
   <div class="field">
     <%= form.label "Nombre*" %>
     <%= form.text_field :name, id: :activity_name, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")'%>
-  </div>
-
-  <div class="field">
-    <%= form.label "Activa" %>
-    <%= form.check_box :active, id: :activity_active %>
   </div>
 
   <div class="field">
@@ -56,7 +59,16 @@
     <%= form.text_field :ending_time, id: :schedule_ending_time, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
+    <div class="field">
+    <%= form.label "Activa" %>
+    <%= form.check_box :active, id: :activity_active %>
+  </div>
+
   <div class="actions">
     <%= form.submit 'Crear actividad' %>
   </div>
 <% end %>
+
+</div>
+
+</body>

@@ -1,3 +1,8 @@
+
+<head> 
+ <%= stylesheet_link_tag "forms" %>
+</head>
+
 <%= form_with(model: associate, local: true) do |form| %>
   <% if associate.errors.any? %>
     <div id="error_explanation">
@@ -11,9 +16,16 @@
     </div>
   <% end %>
 
+  <div class="container">
+
   <div class="field">
     <%= form.label 'Código*' %>
     <%= form.number_field :code, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
+  </div>
+
+ <div class="field">
+    <%= form.label 'Posición*' %>
+    <%= form.number_field :position, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
@@ -45,3 +57,5 @@
     <%= form.submit 'Crear asociado' %>
   </div>
 <% end %>
+</div>
+

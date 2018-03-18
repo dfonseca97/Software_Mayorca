@@ -1,31 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Attendances</h1>
+<head> 
 
-<table>
-  <thead>
-    <tr>
-      <th>Associate code</th>
-      <th>Activity name</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= stylesheet_link_tag "tables" %>
+<%= stylesheet_link_tag "buttons" %>
 
-  <tbody>
-    <% @attendances.each do |attendance| %>
+</head>
+
+<body>
+<h1>Asistencias</h1>
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
       <tr>
-        <td><%= attendance.associate_code %></td>
+        <th><span>Código</span></th>
+        <th><span>Actividad</span></th>
+        <th><span>Fecha</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tbody>
+     <% @attendances.each do |attendance| %>
+      <tr>
+        <td class="lalign"><%= attendance.associate_code %></td>
         <td><%= attendance.activity_name %></td>
         <td><%= attendance.date %></td>
-        <td><%= link_to 'Show', attendance %></td>
-        <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
-        <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+ </div> 
 
 <br>
 
-<%= link_to 'New Attendance', new_attendance_path %>
+<%= link_to 'Atrás', select_index_path, class: 'button' %>
+
+</body>

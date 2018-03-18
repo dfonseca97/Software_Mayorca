@@ -1,39 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Associates</h1>
+<head> 
+<%= stylesheet_link_tag "tables" %>
+<%= stylesheet_link_tag "buttons" %>
+</head>
 
-<table>
-  <thead>
-    <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Last name</th>
-      <th>Sponsor</th>
-      <th>Ascending president</th>
-      <th>Ascending tabulator</th>
-      <th>Last payment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<body>
+  <h1>Asociados</h1>
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Código</span></th>
+        <th><span>Nombre</span></th>
+        <th><span>Apellido</span></th>
+        <th><span>Posición</span></th>
+        <th><span>Patrocinador</span></th>
+        <th><span>Presidente ascendente</span></th>
+        <th><span>Tabulador ascendente</span></th>
+        <th><span>Último pago</span></th>
+        <th><span>Gestión</span></th>
+        <th><span></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tbody>
     <% @associates.each do |associate| %>
       <tr>
-        <td><%= associate.code %></td>
+        <td class="lalign"><%= associate.code %></td>
         <td><%= associate.name %></td>
         <td><%= associate.last_name %></td>
+        <td><%= associate.position %></td>
         <td><%= associate.sponsor %></td>
         <td><%= associate.ascending_president %></td>
         <td><%= associate.ascending_tabulator %></td>
         <td><%= associate.last_payment %></td>
-        <td><%= link_to 'Show', associate %></td>
-        <td><%= link_to 'Edit', edit_associate_path(associate) %></td>
-        <td><%= link_to 'Destroy', associate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_associate_path(associate), class: 'button'  %></td>
+        <td><%= link_to 'Destroy', associate, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>   </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+      
+    </tbody>
+  </table>
+ </div> 
 
-<br>
-
-<%= link_to 'New Associate', new_associate_path %>
+   <%= link_to 'Atrás', select_associate_management_path, class: 'button' %>
+</body>

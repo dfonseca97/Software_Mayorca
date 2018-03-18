@@ -1,5 +1,14 @@
+<head> 
+	
+	<%= stylesheet_link_tag "buttons" %>
+
+</head>
+
 <h2> Gestión de asociados </h2>
 
-<td><%= link_to 'nuevo asociado',  new_associate_path %></td>
+
+<td><%= link_to 'Nuevo asociado',  new_associate_path, class: 'button' %></td>
 <br>
-<td><%= link_to 'ver asociados',  associates_path %></td>
+<td><%= link_to 'Ver asociados',  associates_path, class: 'button' %></td>
+
+<td><%= link_to 'Atrás',  select_index_path, class: 'button' %></td>

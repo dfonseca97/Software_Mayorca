@@ -1,5 +1,12 @@
-<h1>Crear actividad</h1>
+
+<head> 
+ <%= stylesheet_link_tag "forms" %>
+</head>
+
+
+<div class="form_title"> <h1>Crear actividad</h1></div>
 
 <%= render 'form', schedule: @schedule %>
 
-<%= link_to 'Back', schedules_path %>
+<%= link_to 'Back', schedules_path, class: 'button' %>
+

@@ -1,7 +1,16 @@
+<head> 
+	
+	<%= stylesheet_link_tag "buttons" %>
+
+</head>
+
 <h2> Gestión de actividades </h2>
 
-<td><%= link_to 'nueva actividad', new_schedule_path %></td>
+
+<td><%= link_to 'nueva actividad', new_schedule_path, class: 'button' %></td>
 <br>
-<td><%= link_to 'ver actividades', activities_path %></td>
+<td><%= link_to 'ver actividades', activities_path, class: 'button' %></td>
 <br>
-<td><%= link_to 'ver horarios', schedules_path %></td>
+<td><%= link_to 'ver horarios', schedules_path, class: 'button' %></td>
+
+<td><%= link_to 'atrás',  select_index_path, class: 'button' %></td>

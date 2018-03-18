@@ -69,7 +69,7 @@ class AssociatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def associate_params
-      params.require(:associate).permit(:code, :name, :last_name, :sponsor, 
+      params.require(:associate).permit(:code, :name, :position, :last_name, :sponsor, 
         :ascending_president, :ascending_tabulator, :last_payment)
     end
 end
