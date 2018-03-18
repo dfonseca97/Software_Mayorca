@@ -25,7 +25,7 @@
 
  <div class="field">
     <%= form.label 'Posición*' %>
-    <%= form.number_field :position, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
+    <%= form.text_field :position, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
