@@ -15,4 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
  Rails.application.config.assets.precompile += %w( tables.css )
  Rails.application.config.assets.precompile += %w( buttons.css )
  Rails.application.config.assets.precompile += %w( forms.css )
-
+ Rails.application.config.assets.precompile += %w( menu.css )
+ Rails.application.config.assets.precompile += %w( background.css )

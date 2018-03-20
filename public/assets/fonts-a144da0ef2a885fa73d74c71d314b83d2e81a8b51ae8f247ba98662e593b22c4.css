@@ -1,0 +1,38 @@
+h2{
+
+	font-size: 20px;
+}
+
+.select{
+
+	text-align: center;
+	margin-left: 35%;
+	margin-right: 35%;
+	background-image: url('background');
+}
+
+.menu_title{
+
+	font-family: Nobile;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.menu_button{
+
+  background-color: #6BEE59;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 12px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+  font-size: 18px;
+}

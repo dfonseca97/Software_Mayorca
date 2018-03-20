@@ -1,18 +1,29 @@
 <head> 
 	
 	<%= stylesheet_link_tag "buttons" %>
+	<%= stylesheet_link_tag "menu" %>
+	<%= stylesheet_link_tag "background" %>
+   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nobile" />
 
 </head>
 
-<h2> Gestión </h2>
+<body class="background_image">
 
-<td><%= link_to 'gestión de asociados',  select_associate_management_path, class: 'button' %></td>
-<br>
-<td><%= link_to 'gestión de actividades', select_activity_management_path, class: 'button' %></td>
+ <div class="select">
+  <h2 class="menu_title"> Gestión </h2>
 
-<h2> Asistencias </h2>
+  <td><%= link_to 'gestión de asociados',  select_associate_management_path, class: 'menu_button' %></td>
+  <br>
+  <td><%= link_to 'gestión de actividades', select_activity_management_path, class: 'menu_button' %></td>
+  <br>
 
-<td><%= link_to 'nueva asistencia',  new_attendance_path,  class: 'button' %></td>
-<br>
-<td><%= link_to 'ver asistencias',  attendances_path, class: 'button' %></td>
-<%= link_to 'Atrás',  welcome_index_path, class: 'button' %>
+  <h2 class="menu_title"> Asistencias </h2>
+
+  <td><%= link_to 'nueva asistencia',  new_attendance_path,  class: 'menu_button' %></td>
+  <br>
+  <td><%= link_to 'ver asistencias',  attendances_path, class: 'menu_button' %></td>
+  <br>
+  <%= link_to 'Atrás',  welcome_index_path, class: 'menu_button' %>
+ </div>
+
+</body>

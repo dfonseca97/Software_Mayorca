@@ -1,16 +1,25 @@
 <head> 
 	
 	<%= stylesheet_link_tag "buttons" %>
+	<%= stylesheet_link_tag "background" %>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nobile" />
 
 </head>
 
-<h2> Gestión de actividades </h2>
+<body class="background_image">
+
+  <div class="select">
+  <h2 class="menu_title"> Gestión de actividades </h2>
 
 
-<td><%= link_to 'nueva actividad', new_schedule_path, class: 'button' %></td>
-<br>
-<td><%= link_to 'ver actividades', activities_path, class: 'button' %></td>
-<br>
-<td><%= link_to 'ver horarios', schedules_path, class: 'button' %></td>
+  <td><%= link_to 'nueva actividad', new_schedule_path, class: 'menu_button' %></td>
+  <br>
+  <td><%= link_to 'ver actividades', activities_path, class: 'menu_button' %></td>
+  <br>
+  <td><%= link_to 'ver horarios', schedules_path, class: 'menu_button' %></td>
+  <br>
 
-<td><%= link_to 'atrás',  select_index_path, class: 'button' %></td>
+  <td><%= link_to 'atrás',  select_index_path, class: 'menu_button' %></td>
+  </div>
+
+</body>
