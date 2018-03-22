@@ -1,5 +1,9 @@
 {
   "name": "software_mayorca",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.2.0",
+    "webpack-dev-server": "^3.1.1"
+  }
 }
