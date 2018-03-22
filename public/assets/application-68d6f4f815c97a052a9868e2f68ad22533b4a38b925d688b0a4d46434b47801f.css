@@ -1,0 +1,262 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*= require bootstrap.min
+.background_image{
+
+	 background-image: url('background.png');
+	 background-size: cover;
+}
+.button {
+  background-color: #6BEE59;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  font-size: 12px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Verdana", Verdana, sans-serif;
+  font-size: 18px;
+}
+
+input[type=text], select {
+    width: 80%;
+    padding: 10px 20px;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-self: center;
+    font-family: "Verdana", Verdana, sans-serif;
+    font-size: 18px;
+}
+
+input[type=number], select {
+    width: 80%;
+    padding: 10px 20px;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    align-self: center;
+    font-family: "Verdana", Verdana, sans-serif;
+    font-size: 18px;
+}
+
+input[type=submit]{
+  background-color: #6BEE59;
+  padding: 10px 20px;
+  margin: all;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: white;
+  font-family: "Verdana", Verdana, sans-serif;
+  font-size: 18px;
+}
+
+.container{
+    width: 50%;
+    padding: 20px;
+    background-color: #f2f2f2; 
+    margin: auto;
+    font-family: "Verdana", Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.form_title{
+    width: 50%;
+    padding: 20px;
+    background-color: #f2f2f2; 
+    margin: auto;
+    background-color: #6BEE59;
+    color: #FFFFFF;
+    font-family: "Verdana", Verdana, sans-serif;
+
+}   
+
+
+label{
+
+  display: block;
+  color: #595959;
+}
+h2{
+
+	font-size: 20px;
+}
+
+.select{
+
+	text-align: center;
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 10%;
+
+}
+
+.menu_title{
+
+	font-family: Nobile;
+	font-size: 35px;
+	font-weight: bolder;
+}
+
+.menu_button{
+
+  background-color: #6BEE59;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 12px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+  font-size: 18px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { overflow-y: scroll; }
+body { 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: white;
+  padding: 22px 10px;
+  padding-bottom: 55px;
+}
+
+::selection { background: #5f74a0; color: #fff; }
+::-moz-selection { background: #5f74a0; color: #fff; }
+::-webkit-selection { background: #5f74a0; color: #fff; }
+
+br { display: block; line-height: 1.6em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 { 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 850px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10px 17px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background-color: #6BEE59;
+  color:#FFFFFF;
+  font-family: "Verdana", Verdana, sans-serif;
+  font-size: 18px;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+  font-family: "Verdana", Verdana, sans-serif;
+  font-size: 16px;
+}
+#keywords tbody tr td.lalign {
+  text-align: center;
+  font-family: "Verdana", Verdana, sans-serif;
+  font-size: 16px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
