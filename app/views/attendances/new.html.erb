@@ -1,9 +1,7 @@
-<head> 
-	<%= stylesheet_link_tag "buttons" %>
-</head>
+
 <p id="notice"><%= notice %></p>
 <div class="form_title"><h1>Nueva Asistencia</h1></div>
 
 <%= render 'form', attendance: @attendance %>
 
-<td><%= link_to 'Atrás',  select_index_path, class: 'button' %></td>
+<td><%= link_to 'Atrás',  select_index_path, class: 'btn btn-success btn-lg' %></td>

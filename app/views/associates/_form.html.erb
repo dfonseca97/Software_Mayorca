@@ -2,7 +2,7 @@
 <head> 
  <%= stylesheet_link_tag "forms" %>
 </head>
-
+<body class="background_image">
 <%= form_with(model: associate, local: true) do |form| %>
   <% if associate.errors.any? %>
     <div id="error_explanation">
@@ -54,8 +54,8 @@
   </div>
 
   <div class="actions">
-    <%= form.submit 'Crear asociado' %>
+    <%= form.submit 'Crear asociado', class: 'btn btn-success btn-lg btn-block' %>
   </div>
 <% end %>
 </div>
-
+</body>

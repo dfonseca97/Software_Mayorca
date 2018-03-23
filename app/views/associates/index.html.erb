@@ -1,32 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<head> 
-<%= stylesheet_link_tag "tables" %>
-<%= stylesheet_link_tag "buttons" %>
-</head>
-
-<body>
+ <body class="background_image">
   <h1>Asociados</h1>
-  <table id="keywords" cellspacing="0" cellpadding="0">
+
+
+  <table class="table table-sm">
     <thead>
-      <tr>
-        <th><span>Código</span></th>
-        <th><span>Nombre</span></th>
-        <th><span>Apellido</span></th>
-        <th><span>Posición</span></th>
-        <th><span>Patrocinador</span></th>
-        <th><span>Presidente ascendente</span></th>
-        <th><span>Tabulador ascendente</span></th>
-        <th><span>Último pago</span></th>
-        <th><span>Gestión</span></th>
-        <th><span></span></th>
+      <tr class="bg-success">
+        <th scope="col">Código</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Posición</th>
+        <th scope="col">Patrocinador</th>
+        <th scope="col">Presidente ascendente  </th>
+        <th scope="col">Tabulador ascendente  </th>
+        <th scope="col">Último pago  </th>
+        <th scope="col">Gestión  </th>
+        <th scope="col">  </th>
       </tr>
     </thead>
     <tbody>
       <tbody>
     <% @associates.each do |associate| %>
-      <tr>
-        <td class="lalign"><%= associate.code %></td>
+      <tr class="table-light">
+        <td><%= associate.code %></td>
         <td><%= associate.name %></td>
         <td><%= associate.last_name %></td>
         <td><%= associate.position %></td>
@@ -34,14 +31,13 @@
         <td><%= associate.ascending_president %></td>
         <td><%= associate.ascending_tabulator %></td>
         <td><%= associate.last_payment %></td>
-        <td><%= link_to 'Edit', edit_associate_path(associate), class: 'button'  %></td>
-        <td><%= button_to 'Destroy', associate,  data: { confirm: 'Are you sure?' }, method: :delete, class: 'button' %>   </td>
+        <td><%= link_to 'Edit', edit_associate_path(associate), class: 'btn btn-success btn-lg'  %></td>
+        <td><%= button_to 'Destroy', associate,  data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-success btn-lg' %>   </td>
       </tr>
     <% end %>
-      
     </tbody>
   </table>
- </div> 
 
-   <%= link_to 'Atrás', select_associate_management_path, class: 'button' %>
+   <%= link_to 'Atrás', select_associate_management_path, class: 'btn btn-success btn-lg' %>
+
 </body>

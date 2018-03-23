@@ -3,6 +3,7 @@
  <%= stylesheet_link_tag "forms" %>
 </head>
 
+<body class="background_image">
 <%= form_with(model: attendance, local: true) do |form| %>
   <% if attendance.errors.any? %>
     <div id="error_explanation">
@@ -29,7 +30,8 @@
   </div>
 
   <div class="actions">
-    <%= form.submit 'Crear asistencia' %>
+    <%= form.submit 'Crear asistencia', class: 'btn btn-success btn-lg btn-block' %>
   </div>
 <% end %>
 </div>
+</body>

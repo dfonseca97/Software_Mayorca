@@ -1,37 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<head> 
-  <%= stylesheet_link_tag "tables" %>
-  <%= stylesheet_link_tag "buttons" %>
-</head>
-
-<body>
+<body class="background_image">
 <h1>Actividades</h1>
-  <table id="keywords" cellspacing="0" cellpadding="0">
+  <table class="table table-sm">
     <thead>
-      <tr>
-        <th><span>Nombre</span></th>
-        <th><span>Activa</span></th>
-        <th><span>Gestión</span></th>
-         <th><span>  </span></th>
+      <tr class="bg-success">
+        <th scope="col">Nombre</th>
+        <th scope="col">Activa</th>
+        <th scope="col">Gestión</th>
+        <th scope="col">  </th>
       </tr>
     </thead>
     <tbody>
       <tbody>
      <% @activities.each do |activity| %>
-      <tr>
-        <td class="lalign"><%= activity.name %></td>
+      <tr class="table-light">
+        <td><%= activity.name %></td>
         <td><%= activity.active %></td>
-        <td><%= link_to 'Modificar', edit_activity_path(activity), class: 'button'  %></td>
-        <td><%= button_to 'Eliminar', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %> </td>
+        <td><%= link_to 'Modificar', edit_activity_path(activity), class: 'btn btn-success btn-lg'   %></td>
+        <td><%= button_to 'Eliminar', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-success btn-lg'  %> </td>
       </tr>
       </tr>
     <% end %>
     </tbody>
   </table>
- </div> 
 </body>
 
 <br>
-<%= link_to 'Atrás', select_activity_management_path,  class: 'button'  %>
-<%= link_to 'Nueva Actividad', new_schedule_path,  class: 'button'  %>
+<%= link_to 'Atrás', select_activity_management_path,  class: 'btn btn-success btn-lg'  %>
+

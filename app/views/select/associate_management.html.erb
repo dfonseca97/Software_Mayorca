@@ -1,7 +1,5 @@
 <head> 
 	
-	<%= stylesheet_link_tag "buttons" %>
-	<%= stylesheet_link_tag "background" %>
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nobile" />
 
 </head>
@@ -10,11 +8,11 @@
 <h2 class="menu_title"> Gestión de asociados </h2>
 
 
-<td><%= link_to 'Nuevo asociado',  new_associate_path, class: 'menu_button' %></td>
+<td><%= link_to 'Nuevo asociado',  new_associate_path, class: 'btn btn-success btn-lg btn-block' %></td>
 <br>
-<td><%= link_to 'Ver asociados',  associates_path, class: 'menu_button' %></td>
+<td><%= link_to 'Ver asociados',  associates_path, class: 'btn btn-success btn-lg btn-block' %></td>
 <br>
 
-<td><%= link_to 'Atrás',  select_index_path, class: 'menu_button' %></td>
+<td><%= link_to 'Atrás',  select_index_path, class: 'btn btn-success btn-lg btn-block' %></td>
 </div>
 </body>
