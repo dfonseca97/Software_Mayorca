@@ -31,8 +31,8 @@
         <td><%= associate.ascending_president %></td>
         <td><%= associate.ascending_tabulator %></td>
         <td><%= associate.last_payment %></td>
-        <td><%= link_to 'Edit', edit_associate_path(associate), class: 'btn btn-success btn-lg'  %></td>
-        <td><%= button_to 'Destroy', associate,  data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-success btn-lg' %>   </td>
+        <td><%= link_to 'Modificar', edit_associate_path(associate), class: 'btn btn-success btn-lg'  %></td>
+        <td><%= button_to 'Eliminar', associate,  data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-success btn-lg' %>   </td>
       </tr>
     <% end %>
     </tbody>

@@ -30,8 +30,8 @@
         <td><%= schedule.day_5 %></td>
         <td><%= schedule.starting_time %></td>
         <td><%= schedule.ending_time %></td>
-        <td><%= link_to 'Edit', edit_schedule_path(schedule), class: 'btn btn-success btn-lg'  %></td>
-        <td><%= button_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-success btn-lg'  %>
+        <td><%= link_to 'Modificar', edit_schedule_path(schedule), class: 'btn btn-success btn-lg'  %></td>
+        <td><%= button_to 'Eliminar', schedule, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-success btn-lg'  %>
         </td>
       </tr>
     <% end %>
