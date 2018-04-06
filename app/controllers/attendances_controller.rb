@@ -18,7 +18,7 @@ class AttendancesController < ApplicationController
   def new
 
     @attendance = Attendance.new
-    @activities = Activity.all
+    @activities = Activity.where(active: true)
 
     @names = Array.new
 
