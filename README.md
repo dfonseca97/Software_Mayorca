@@ -1,24 +1,13 @@
-# README
+# Aplicación de toma de asistencia y gestión de ingresos/egresos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Con el desarrollo hasta la fecha es posible:
 
-Things you may want to cover:
+* Crear asociados nuevos.
+* Crear actividades nuevas con sus respectivos horarios.
+* Crear asistencias.
 
-* Ruby version
+En un futuro se espera lograr la gestión de ingresos y egresos así como la generación de informes con respecto a los asociados y a los pagos.
 
-* System dependencies
+La aplicación se encuentra alojada en Heroku, accesible mediante el siguiente link:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+fathomless-headland-90439.herokuapp.com/
