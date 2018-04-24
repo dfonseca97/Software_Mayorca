@@ -20,12 +20,12 @@
 
   <div class="field">
     <%= form.label 'Código*' %>
-    <%= form.number_field :code, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
+    <%= form.text_field :code, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
  <div class="field">
     <%= form.label 'Posición*' %>
-    <%= form.text_field :position, id: :associate_code, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
+    <%= form.select :position, ["Asociado", "Mayorista", "Equipo del mundo", "GET", "Millonario", "Presidente"], :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
@@ -39,18 +39,18 @@
   </div>
 
   <div class="field">
-    <%= form.label 'Patrocinador' %>
-    <%= form.text_field :sponsor, id: :associate_sponsor %>
+    <%= form.label 'Patrocinador*' %>
+    <%= form.text_field :sponsor, id: :associate_sponsor, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
-    <%= form.label 'Presidente ascendente' %>
-    <%= form.text_field :ascending_president, id: :associate_ascending_president %>
+    <%= form.label 'Presidente ascendente*' %>
+    <%= form.text_field :ascending_president, id: :associate_ascending_president, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="field">
-    <%= form.label 'Tabulador ascendente' %>
-    <%= form.text_field :ascending_tabulator, id: :associate_ascending_tabulator %>
+    <%= form.label 'Tabulador ascendente*' %>
+    <%= form.text_field :ascending_tabulator, id: :associate_ascending_tabulator, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
 
   <div class="actions">

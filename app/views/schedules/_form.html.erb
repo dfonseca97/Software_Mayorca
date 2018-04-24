@@ -52,9 +52,7 @@
     <%= form.text_field :ending_time, id: :schedule_ending_time, :required => true, oninvalid: 'this.setCustomValidity("Este campo no debe estar vacío.")', oninput: 'this.setCustomValidity("")' %>
   </div>
     <div class="field">
-    <%= form.label "Activa" %>
-        <br>
-    <%= form.check_box :active, id: :activity_active %>
+    Activa <%= form.check_box :active, id: :activity_active %>
   </div>
   <br>
 
