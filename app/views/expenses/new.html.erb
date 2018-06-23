@@ -1,0 +1,12 @@
+<head> 
+ <%= stylesheet_link_tag "forms" %>
+</head>
+<div class="form_title">
+
+<h1>Nuevo Egreso</h1>
+
+</div>
+<%= render 'form', expense: @expense %>
+
+<%= link_to 'Atrás', select_finances_management_path,  class: 'btn btn-success btn-lg'  %>
+

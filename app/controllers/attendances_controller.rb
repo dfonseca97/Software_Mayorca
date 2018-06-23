@@ -36,6 +36,8 @@ class AttendancesController < ApplicationController
 
   # POST /attendances
   # POST /attendances.json
+
+
   def create
 
    #Encontrar asociado por codigo y actividad por nombre.

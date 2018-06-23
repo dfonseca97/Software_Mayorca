@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<body class="background_image">
+<h1>Expenses</h1>
+
+ <h1>Horarios</h1>
+
+    <table class="table table-sm">
+    <thead>
+      <tr class="bg-success">
+        <th scope="col">Concepto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Destinatario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tbody>
+    <% @expenses.each do |expense| %>
+      <tr class="table-light">
+        <td><%= expense.concept %></td>
+        <td><%= expense.amount %></td>
+        <td><%= expense.date %></td>
+        <td><%= expense.receiver %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+<%= link_to 'Atrás', select_finances_management_path,  class: 'btn btn-success btn-lg'  %>
+
